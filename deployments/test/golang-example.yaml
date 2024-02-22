@@ -17,3 +17,7 @@ spec:
       containers:
       - name: golang
         image: golang:1.16.1
+        command: 
+          - "/bin/sh"
+          - "-c"
+          - "sleep infinity"
