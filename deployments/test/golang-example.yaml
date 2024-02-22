@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-example
+  labels:
+    app: golang-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-example
+  template:
+    metadata:
+      labels:
+        app: golang-example
+    spec:
+      containers:
+      - name: golang
+        image: golang:1.16.1
